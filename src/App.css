@@ -1,38 +1,93 @@
 .App {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.SidebarTitle {
+  color: rgb(174, 255, 0); 
+  font-size: 30px; 
   text-align: center;
+  padding: 10px 0; 
+  background-color: #2F4050; 
+  border-bottom: 2px solid #293846; 
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Sidebar {
+  height: 100%;
+  width: 250px;
+  background-color: #2F4050;
+  position: fixed; /* Fixed position on the left */
+  top: 0;
+  left: 0;
+  padding: 20px;
+  color: #FFFFFF; /* White text */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.SidebarList {
+ 
+  height: 100%;
+  width: 100%;
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  list-style-type: none; /* Remove default list styling */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+.SidebarList .row{
+  width: 100%;
+  height: 50px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
   color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 0 15px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  list-style-type: none; /* Remove default list styling */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: stretch; /* Stretch items to fill the sidebar width */
+}
+.row #title {
+  flex: 70%;
+}
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #293846;
+  text-decoration: underline; /* Add underline effect */
+  text-decoration-color: white; /* Optional: Change underline color to white */
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SidebarList .active {
+  background-color: #293846; /* Example background color for active item */
+  color: white; /* Example text color for active item */
+  font-weight: bold; /* Optional: make the text bold */
+  text-decoration: underline; /* Add underline effect */
+  text-decoration-color: white; /* Optional: Change underline color to white */
+  border-left: 3px solid white; /* Add a left border for the active item */
+  padding-right: 10px;
+
 }

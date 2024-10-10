@@ -1,0 +1,60 @@
+/* General layout and styling */
+.table-container {
+  display: flex;
+  justify-content: center; /* Center the table horizontally */
+  padding: 20px;
+  margin-left: 200px; /* Adjust depending on your sidebar's width */
+}
+
+.table-box {
+  width: 80%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #4CAF50; /* Increased the border width and kept the green color */
+  margin-left: 90px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd; 
+  text-align: left; /* Align text to the left for better readability */
+}
+
+th {
+  background-color: #4CAF50; /* Use a bold color for the header */
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em; /* Make header text larger */
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+tbody td {
+  font-size: 1.1em; /* Make body text slightly larger */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+tbody tr:nth-child(even) {
+  background-color: white;
+}
