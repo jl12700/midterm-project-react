@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles/AddItem.css';
 
-function AddItem({ addItem, existingItemIDs }) {
+function AddItem({ addItem, existingItemIDs = [] }) {
   const [itemID, setItemID] = useState('');
   const [itemName, setItemName] = useState('');
   const [quantity, setQuantity] = useState('');
@@ -81,5 +81,6 @@ function AddItem({ addItem, existingItemIDs }) {
     </div>
   );
 }
+
 
 export default AddItem;

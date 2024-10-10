@@ -21,14 +21,43 @@ function App() {
         <InventorySidebar setCategoryFilter={setCategoryFilter} />
         <div className="content">
           <Routes>
-            <Route path="/add-item" element={<AddItem addItem={(item) => setInventory([...inventory, item])} />} />
-            <Route path="/update-item" element={<UpdateItem inventory={inventory} setInventory={setInventory} />} />
-            <Route path="/remove-item" element={<RemoveItem inventory={inventory} setInventory={setInventory} />} />
-            <Route path="/display-items" element={<DisplayItems items={inventory} categoryFilter={categoryFilter} />} />
-            <Route path="/display-by-category" element={<DisplayByCategory items={inventory} />} />
-            <Route path="/search-item" element={<SearchItem items={inventory} />} />
-            <Route path="/sort-items" element={<SortItems items={inventory} />} />
-            <Route path="/display-low-stock-items" element={<DisplayLowStockItems items={inventory} />} />
+            <Route 
+              path="/add-item" 
+              element={
+                <AddItem 
+                  addItem={(item) => setInventory([...inventory, item])} 
+                  existingItemIDs={inventory.map(item => item.id)} 
+                />
+              } 
+            />
+            <Route 
+              path="/update-item" 
+              element={<UpdateItem inventory={inventory} setInventory={setInventory} />} 
+            />
+            <Route 
+              path="/remove-item" 
+              element={<RemoveItem inventory={inventory} setInventory={setInventory} />} 
+            />
+            <Route 
+              path="/display-items" 
+              element={<DisplayItems items={inventory} categoryFilter={categoryFilter} />} 
+            />
+            <Route 
+              path="/display-by-category" 
+              element={<DisplayByCategory items={inventory} />} 
+            />
+            <Route 
+              path="/search-item" 
+              element={<SearchItem items={inventory} />} 
+            />
+            <Route 
+              path="/sort-items" 
+              element={<SortItems items={inventory} />} 
+            />
+            <Route 
+              path="/display-low-stock-items" 
+              element={<DisplayLowStockItems items={inventory} />} 
+            />
           </Routes>
         </div>
       </div>
