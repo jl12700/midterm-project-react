@@ -1,5 +1,5 @@
 import React from 'react';
-import './display.css';
+import './styles/display.css';
 
 function DisplayItems({ items, categoryFilter }) {
   const filteredItems = categoryFilter
@@ -9,7 +9,7 @@ function DisplayItems({ items, categoryFilter }) {
   return (
     <div className="table-container">
       <div className="table-box">
-        <h2>Display Items</h2> {/* Optional heading */}
+        <h2>Display Items</h2>
         <table>
           <thead>
             <tr>

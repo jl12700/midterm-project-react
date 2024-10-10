@@ -1,17 +1,31 @@
 import React, { useState } from 'react';
-import './AddItem.css'; // Ensure the CSS file is named correctly
+import './styles/AddItem.css';
 
-function AddItem({ addItem }) {
+function AddItem({ addItem, existingItemIDs }) {
   const [itemID, setItemID] = useState('');
   const [itemName, setItemName] = useState('');
   const [quantity, setQuantity] = useState('');
   const [price, setPrice] = useState('');
   const [category, setCategory] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setErrorMessage(''); 
+    
+    if (existingItemIDs.includes(itemID)) {
+      setErrorMessage('Item ID already exists. Please use a different ID.');
+      return;
+    }
+
+    if (quantity <= 0 || price <= 0) {
+      setErrorMessage('Quantity and Price must be greater than zero.');
+      return;
+    }
+
     addItem({ id: itemID, name: itemName, quantity, price, category });
     alert('Item added successfully!');
+
     setItemID('');
     setItemName('');
     setQuantity('');
@@ -20,8 +34,9 @@ function AddItem({ addItem }) {
   };
 
   return (
-    <div className="add-item-container"> {/* Add this wrapper div */}
-    <h2>ADD ITEM</h2>
+    <div className="add-item-container">
+      <h2>ADD ITEM</h2>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       <form onSubmit={handleSubmit}>
         <input 
           type="text" 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './LowStockItems.css';
+import './styles/LowStockItems.css';
 
 function DisplayLowStockItems({ items }) {
   const lowStockItems = items.filter(item => item.quantity <= 5);

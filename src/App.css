@@ -1,21 +1,22 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background-color: beige;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: beige;
 }
 
 .SidebarTitle {
-  color: rgb(174, 255, 0); 
-  font-size: 30px; 
+  color: rgb(174, 255, 0);
+  font-size: 30px;
   text-align: center;
-  padding: 10px 0; 
-  background-color: #2F4050; 
-  border-bottom: 2px solid #293846; 
+  padding: 10px 0;
+  background-color: #2F4050;
+  border-bottom: 2px solid #293846;
   font-weight: bold;
   width: 100%;
   margin-bottom: 5px;
@@ -23,71 +24,70 @@ body {
 
 .Sidebar {
   height: 100%;
-  width: 250px;
+  width: 255px;
   background-color: #2F4050;
-  position: fixed; /* Fixed position on the left */
+  position: fixed;
   top: 0;
   left: 0;
   padding: 20px;
-  color: #FFFFFF; /* White text */
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-
 .SidebarList {
- 
   height: 100%;
   width: 100%;
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-  list-style-type: none; /* Remove default list styling */
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Arrange items in a column */
-  align-items: flex-start; /* Align items to the start of the flex container */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.SidebarList .row{
+.SidebarList .row {
   width: 100%;
   height: 50px;
-  list-style-type: none;
-  margin: 0%;
+  margin: 0;
   display: flex;
   flex-direction: row;
   color: white;
   justify-content: center;
   align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 0 15px;
-  box-sizing: border-box;
   padding: 10px 15px;
+  box-sizing: border-box;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  list-style-type: none; /* Remove default list styling */
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Arrange items in a column */
-  align-items: stretch; /* Stretch items to fill the sidebar width */
 }
+
 .row #title {
   flex: 70%;
 }
-.SidebarList .row:hover {
-  cursor: pointer;
-  background-color: #293846;
-  text-decoration: underline; /* Add underline effect */
-  text-decoration-color: white; /* Optional: Change underline color to white */
+
+.SidebarList .row a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
+.SidebarList .row:hover {
+  background-color: #293846;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
 
 .SidebarList .active {
-  background-color: #293846; /* Example background color for active item */
-  color: white; /* Example text color for active item */
-  font-weight: bold; /* Optional: make the text bold */
-  text-decoration: underline; /* Add underline effect */
-  text-decoration-color: white; /* Optional: Change underline color to white */
-  border-left: 3px solid white; /* Add a left border for the active item */
+  background-color: #293846;
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: white;
+  border-left: 3px solid white;
   padding-right: 10px;
-
 }

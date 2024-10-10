@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './RemoveItem.css';
+import './styles/RemoveItem.css';
 
 function RemoveItem({ inventory, setInventory }) {
   const [itemID, setItemID] = useState('');
@@ -11,28 +11,26 @@ function RemoveItem({ inventory, setInventory }) {
       return;
     }
 
-    // Check if the item exists
     const itemToRemove = inventory.find(item => item.id === itemID);
     if (!itemToRemove) {
       alert('Item not found!');
       return;
     }
 
-    // Filter out the item to remove and update inventory
     const updatedInventory = inventory.filter(item => item.id !== itemID);
     setInventory(updatedInventory);
     alert('Item removed successfully!');
-    setItemID(''); // Reset input
+    setItemID('');
   };
 
   return (
-    <div className="container"> {/* Use the container class here */}
-      <div className="remove-item-box"> {/* Use the remove-item-box class here */}
+    <div className="container">
+      <div className="remove-item-box">
         <h2>Remove Item</h2>
         <form onSubmit={handleRemove}>
           <input 
             type="text" 
-            placeholder="Enter Item ID to Remove" 
+            placeholder="Enter Item ID to remove" 
             value={itemID} 
             onChange={(e) => setItemID(e.target.value)} 
             required 

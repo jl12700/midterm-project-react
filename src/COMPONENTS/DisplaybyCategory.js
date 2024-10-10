@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import './category.css';
+import './styles/category.css';
 
 function DisplayByCategory({ items }) {
   const [categoryFilter, setCategoryFilter] = useState('');
 
-  // Define your fixed categories
   const categories = ['Clothing', 'Electronics', 'Entertainment'];
 
-  // Filter items based on selected category
   const filteredItems = categoryFilter
     ? items.filter(item => item.category === categoryFilter)
     : items;
@@ -21,7 +19,6 @@ function DisplayByCategory({ items }) {
       <div className="table-box">
         <h2>Display Items by Category</h2>
         
-        {/* Dropdown for selecting category */}
         <label htmlFor="category-select">Choose a category:</label>
         <select 
           id="category-select" 

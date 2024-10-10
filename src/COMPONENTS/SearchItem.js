@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './search.css';
+import './styles/search.css';
 function SearchItem({ items }) {
   const [searchId, setSearchId] = useState('');
   const [foundItem, setFoundItem] = useState(null);

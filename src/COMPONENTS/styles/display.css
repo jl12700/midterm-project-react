@@ -1,9 +1,8 @@
-/* General layout and styling */
 .table-container {
   display: flex;
-  justify-content: center; /* Center the table horizontally */
+  justify-content: center;
   padding: 20px;
-  margin-left: 200px; /* Adjust depending on your sidebar's width */
+  margin-left: 200px;
 }
 
 .table-box {
@@ -12,12 +11,11 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 2px solid #4CAF50; /* Increased the border width and kept the green color */
+  border: 2px solid #4CAF50;
   margin-left: 90px;
   margin-top: 30px;
 }
 
-/* Table styling */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -26,15 +24,15 @@ table {
 
 th, td {
   padding: 12px;
-  border: 1px solid #ddd; 
-  text-align: left; /* Align text to the left for better readability */
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
 th {
-  background-color: #4CAF50; /* Use a bold color for the header */
+  background-color: #4CAF50;
   color: white;
   font-weight: bold;
-  font-size: 1.2em; /* Make header text larger */
+  font-size: 1.2em;
 }
 
 tbody tr:hover {
@@ -42,7 +40,7 @@ tbody tr:hover {
 }
 
 tbody td {
-  font-size: 1.1em; /* Make body text slightly larger */
+  font-size: 1.1em;
 }
 
 h2 {

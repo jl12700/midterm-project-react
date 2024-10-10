@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SortItem.css';
+import './styles/SortItem.css';
 
 function SortItems({ items }) {
   const [sortBy, setSortBy] = useState('quantity');
@@ -35,7 +35,6 @@ function SortItems({ items }) {
             <option value="ascending">Ascending</option>
             <option value="descending">Descending</option>
           </select>
-          <button type="button">Sort Items</button>
         </form>
         
         <table>
